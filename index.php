@@ -30,8 +30,6 @@
             <!-- Header -->
             <div class="jumbotron jumbotron-fluid header--container">
                 <div class="container">
-                    <h1 class="display-4">Telefonliste</h1>
-                    <p class="lead">Stadt Kamen</p>
                 </div>
             </div>
 
@@ -82,43 +80,30 @@
             </div>
 
             <!-- Grid -->
-            <?php for($i = 0; $i <= 10; $i++) { ?>
-            <div class="row mb-4 mt-4">
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
+            <div id="gridList" class="mt-4">
+
+
+                <?php for($i = 0; $i <= 5; $i++) { ?>
+                    <div class="row mb-3">
+
+                        <?php for($j = 0; $j <= 2; $j++) { ?>
+                            <div class="col-md-4">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Uvuvwevwevwe Osas</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">+49 (0) 1337 69 69</h6>
+                                        <p class="card-text">Irgendwelche weiteren Informationen hier.</p>
+                                        <a href="#" class="card-link">Anrufen</a>
+                                        <a href="#" class="card-link">E-Mail senden</a>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php } ?>
+
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
+
             </div>
-            <?php } ?>
 
         </div>
 
