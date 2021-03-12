@@ -15,3 +15,15 @@ body {
     padding: 30px;
     color: white;
 }
+
+.sortButton, .filterButton {
+    border: 1px solid #ced4da;
+    width: 100%;
+}
+
+.searchResults {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}

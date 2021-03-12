@@ -11,14 +11,16 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <!-- Stylesheets -->
-<link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap-grid.min.css">
-<link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap-reboot.min.css">
-<link rel="stylesheet" href="./assets/vendor/bootstrap/css/bootstrap-utilities.min.css">
-<link rel="stylesheet" href="./assets/css/style.css">
+<link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap-grid.min.css">
+<link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap-reboot.min.css">
+<link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap-utilities.min.css">
+<link rel="stylesheet" href="/assets/css/style.css">
 
 <!-- JavaScript-->
-<script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/assets/vendor/jQuery/js/jquery-3.5.1.js" crossorigin="anonymous"></script>
+<script src="/assets/vendor/bootstrap/js/bootstrap-4.5.3.js" crossorigin="anonymous"></script>
+
 <body>
 
     <!-- wrapper container -->
@@ -43,29 +45,39 @@
                     </div>
                 </div>
 
-                <!-- Accordion -->
+                <!-- Abteilungen -->
                 <div class="col-md-3">
-                    YEE
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle filterButton" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Filtern nach
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">10.3 Musik</a>
+                            <a class="dropdown-item" href="#">10.2 Feuerwehr</a>
+                            <a class="dropdown-item" href="#">10.1 Standesamt</a>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Dropdown -->
                 <div class="col-md-3">
                     <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Dropdown button
+                        <button class="btn dropdown-toggle sortButton" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sortieren nach
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <a class="dropdown-item" href="#">Name</a>
+                            <a class="dropdown-item" href="#">Telefonnummer</a>
+                            <a class="dropdown-item" href="#">Abteilung</a>
                         </div>
                     </div>
-
                 </div>
 
                 <!-- Count Searchresults -->
                 <div class="col-md-3">
-
+                    <div class="searchResults">
+                        <div>69 Suchergebnisse</div>
+                    </div>
                 </div>
             </div>
 
@@ -73,7 +85,7 @@
             <?php for($i = 0; $i <= 10; $i++) { ?>
             <div class="row mb-4 mt-4">
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card mb-4">
                         <div class="card-body">
                             <h5 class="card-title">Card title</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
