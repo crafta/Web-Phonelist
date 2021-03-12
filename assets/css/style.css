@@ -1,0 +1,17 @@
+body {
+    background-color: #eee;
+}
+
+.wrapper {
+    width: 800px;
+    padding: 15px 5px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.header--container {
+    background-image: url("../img/bg.jpeg");
+    background-size: cover;
+    padding: 30px;
+    color: white;
+}
