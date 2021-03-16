@@ -1,0 +1,58 @@
+{
+     "user_0":
+     {
+          "name": "YYYYY",
+          "vorname": "LKKKKKK",
+          "telefon": "000-0000",
+          "email": "YYYYY.LKKKKKK@test.de",
+          "funktion": "SB",
+          "gruppetext": "---LLL___LLLLLLL",
+          "raum": "123",
+          "gruppekuerzel": "0.3"
+     },
+     "user_1":
+     {
+          "name": "Müller",
+          "vorname": "Peter",
+          "telefon": "222-100100",
+          "email": "test@test.de",
+          "funktion": "OP",
+          "gruppetext": "YEEET",
+          "raum": "12233",
+          "gruppekuerzel": "0.2"
+     },
+     "user_2":
+     {
+          "name": "Müller",
+          "vorname": "Peter",
+          "telefon": "222-100100",
+          "email": "test@test.de",
+          "funktion": "OP",
+          "gruppetext": "YEEET",
+          "raum": "12345",
+          "gruppekuerzel": "0.2"
+     },
+     "user_3":
+     {
+          "name": "Müller",
+          "vorname": "Peter",
+          "telefon": "222-100100",
+          "email": "test@test.de",
+          "funktion": "OP",
+          "gruppetext": "YEEET",
+          "raum": "123333",
+          "gruppekuerzel": "0.2"
+     },
+     "user_4":
+     {
+          "name": "Müller",
+          "vorname": "Peter",
+          "telefon": "222-100100",
+          "email": "test@test.de",
+          "funktion": "OP",
+          "gruppetext": "YEEET",
+          "raum": "1343423",
+          "gruppekuerzel": "0.2"
+     }
+
+}

@@ -6,21 +6,45 @@
 ?>
 <!DOCTYPE html>
 <html lang="de">
-<meta charset="UTF-8">
-<title>Stadt Kamen Telefonliste</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<head>
+    <meta charset="UTF-8">
+    <title>Stadt Kamen Telefonliste</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<!-- Stylesheets -->
-<link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap-grid.min.css">
-<link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap-reboot.min.css">
-<link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap-utilities.min.css">
-<link rel="stylesheet" href="/assets/css/style.css">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="/assets/vendor/bootstrap/css/bootstrap-utilities.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
 
-<!-- JavaScript-->
-<script src="/assets/vendor/jQuery/js/jquery-3.5.1.js" crossorigin="anonymous"></script>
-<script src="/assets/vendor/bootstrap/js/bootstrap-4.5.3.js" crossorigin="anonymous"></script>
+    <!-- Initialize Global Attributes -->
+    <script>
+        window.userData = [];
+        window.filteredUserData = [];
+		window.departments = [];
+        window.countResults = 0;
+    </script>
 
+    <!-- JavaScript-->
+    <script src="/assets/vendor/jQuery/js/jquery-3.5.1.js" crossorigin="anonymous"></script>
+    <script src="/assets/vendor/bootstrap/js/bootstrap-4.5.3.js" crossorigin="anonymous"></script>
+    <script src="/assets/js/parseUserData.js"></script>
+    <script src="/assets/js/countUserData.js"></script>
+    <script src="/assets/js/filterUserData.js"></script>
+    <script src="/assets/js/renderUserGrid.js"></script>
+    <script src="/assets/js/renderUserList.js"></script>
+    <script src="/assets/js/toggleViewMode.js"></script>
+
+    <!-- Setup defaults -->
+    <script>
+		$(document).ready(function () {
+			countUserData();
+			renderFilters();
+            renderUserGrid();
+		});
+    </script>
+</head>
 <body>
 
     <!-- wrapper container -->
@@ -34,7 +58,7 @@
             </div>
 
             <!-- actions -->
-            <div class="row mt-4">
+            <div class="row mt-4 mb-4">
 
                 <!-- Search -->
                 <div class="col-md-3">
@@ -43,24 +67,20 @@
                     </div>
                 </div>
 
-                <!-- Abteilungen -->
+                <!-- Filter Abteilungen -->
                 <div class="col-md-3">
                     <div class="dropdown">
-                        <button class="btn dropdown-toggle filterButton" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn dropdown-toggle filterButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Filtern nach
                         </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">10.3 Musik</a>
-                            <a class="dropdown-item" href="#">10.2 Feuerwehr</a>
-                            <a class="dropdown-item" href="#">10.1 Standesamt</a>
-                        </div>
+                        <div id="departments" class="dropdown-menu"></div>
                     </div>
                 </div>
 
-                <!-- Dropdown -->
+                <!-- Sort -->
                 <div class="col-md-3">
                     <div class="dropdown">
-                        <button class="btn dropdown-toggle sortButton" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn dropdown-toggle sortButton" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Sortieren nach
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -71,38 +91,27 @@
                     </div>
                 </div>
 
-                <!-- Count Searchresults -->
+                <!-- Layout View Mode -->
                 <div class="col-md-3">
-                    <div class="searchResults">
-                        <div>69 Suchergebnisse</div>
+                    <div class="viewMode">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn" onclick="toggleViewMode('grid')">Kachel</button>
+                            <button type="button" class="btn" onclick="toggleViewMode('list')">Liste</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Grid -->
-            <div id="gridList" class="mt-4">
+            <!-- Count Searchresults -->
+            <div class="col-md-3">
+                <div class="searchResults">
+                    <div id="countUserData"></div>
+                </div>
+            </div>
 
-
-                <?php for($i = 0; $i <= 5; $i++) { ?>
-                    <div class="row mb-3">
-
-                        <?php for($j = 0; $j <= 2; $j++) { ?>
-                            <div class="col-md-4">
-                                <div class="card mb-3">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Uvuvwevwevwe Osas</h5>
-                                        <h6 class="card-subtitle mb-2 text-muted">+49 (0) 1337 69 69</h6>
-                                        <p class="card-text">Irgendwelche weiteren Informationen hier.</p>
-                                        <a href="#" class="card-link">Anrufen</a>
-                                        <a href="#" class="card-link">E-Mail senden</a>
-                                    </div>
-                                </div>
-                            </div>
-                        <?php } ?>
-
-                    </div>
-                <?php } ?>
-
+            <!-- Grid/List -->
+            <div id="userList" class="mt-2">
+                <div id="userData"></div>
             </div>
 
         </div>
