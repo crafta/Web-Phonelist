@@ -32,6 +32,7 @@
     <script src="/assets/js/parseUserData.js"></script>
     <script src="/assets/js/countUserData.js"></script>
     <script src="/assets/js/filterUserData.js"></script>
+    <script src="/assets/js/searchData.js"></script>
     <script src="/assets/js/renderUserGrid.js"></script>
     <script src="/assets/js/renderUserList.js"></script>
     <script src="/assets/js/toggleViewMode.js"></script>
@@ -63,7 +64,13 @@
                 <!-- Search -->
                 <div class="col-md-3">
                     <div class="form-group">
-                        <input type="text" placeholder="Suche..." class="form-control" id="search">
+                        <input
+                            type="text"
+                            placeholder="Suche..."
+                            class="form-control"
+                            id="search"
+                            oninput="search(this.value)"
+                        >
                     </div>
                 </div>
 

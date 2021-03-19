@@ -7,6 +7,19 @@ function renderFilters() {
 	const departments = window.departments;
 	const departmentsEl = document.getElementById('departments');
 
+    const defaultOptionEl = document.createElement('a');
+    const defualtValueEl = document.createTextNode('Alle');
+
+    defaultOptionEl.className = 'dropdown-item';
+    defaultOptionEl.href = '#';
+    defaultOptionEl.addEventListener('click', function () {
+        filterUserData('all');
+    });
+
+    defaultOptionEl.appendChild(defualtValueEl);
+
+    departmentsEl.appendChild(defaultOptionEl);
+
 	departments.map(department => {
 		const optionEl = document.createElement('a');
 		const valueEl = document.createTextNode(department);
@@ -25,8 +38,12 @@ function renderFilters() {
 
 function filterUserData(department) {
 	const userData = window.userData;
-
-	window.filteredUserData = userData.filter(user => user.gruppetext === department);
+    if (department === 'all') {
+        window.filteredUserData = window.userData;
+    }
+    else {
+        window.filteredUserData = userData.filter(user => user.gruppetext === department);
+    }
 	renderUserGrid();
 	countUserData();
 }
