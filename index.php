@@ -30,23 +30,14 @@
     <!-- JavaScript-->
     <script src="/assets/vendor/jQuery/js/jquery-3.5.1.js" crossorigin="anonymous"></script>
     <script src="/assets/vendor/bootstrap/js/bootstrap-4.5.3.js" crossorigin="anonymous"></script>
-    <script src="/assets/js/parseUserData.js"></script>
-    <script src="/assets/js/countUserData.js"></script>
-    <script src="/assets/js/filterUserData.js"></script>
-    <script src="/assets/js/sortUserData.js"></script>
-    <script src="/assets/js/searchData.js"></script>
     <script src="/assets/js/renderUserGrid.js"></script>
     <script src="/assets/js/renderUserList.js"></script>
     <script src="/assets/js/toggleViewMode.js"></script>
-
-    <!-- Setup defaults -->
-    <script>
-		$(document).ready(function () {
-			countUserData();
-			renderFilters();
-            renderUserGrid();
-		});
-    </script>
+    <script src="/assets/js/countUserData.js"></script>
+    <script src="/assets/js/parseUserData.js"></script>
+    <script src="/assets/js/filterUserData.js"></script>
+    <script src="/assets/js/sortUserData.js"></script>
+    <script src="/assets/js/searchData.js"></script>
 </head>
 <body>
 
