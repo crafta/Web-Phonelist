@@ -44,6 +44,7 @@ function filterUserData(department) {
     else {
         window.filteredUserData = userData.filter(user => user.gruppetext === department);
     }
-	renderUserGrid();
+
+    renderViewMode();
 	countUserData();
 }

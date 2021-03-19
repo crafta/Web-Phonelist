@@ -1,5 +1,5 @@
 /***
- * Searches the filtered telephonelist for
+ * Searches the telephonelist for
  * name, phonenumber, email, funktion, abteilung, raum
  */
 function search(query) {
@@ -15,6 +15,6 @@ function search(query) {
             user.gruppetext.toLowerCase().includes(queryLower) ||
             user.raum.toLowerCase().includes(queryLower));
 
-    renderUserGrid();
+    renderViewMode();
     countUserData();
 }

@@ -24,6 +24,7 @@
         window.filteredUserData = [];
 		window.departments = [];
         window.countResults = 0;
+        window.viewMode = 'grid';
     </script>
 
     <!-- JavaScript-->
@@ -32,6 +33,7 @@
     <script src="/assets/js/parseUserData.js"></script>
     <script src="/assets/js/countUserData.js"></script>
     <script src="/assets/js/filterUserData.js"></script>
+    <script src="/assets/js/sortUserData.js"></script>
     <script src="/assets/js/searchData.js"></script>
     <script src="/assets/js/renderUserGrid.js"></script>
     <script src="/assets/js/renderUserList.js"></script>
@@ -91,9 +93,9 @@
                             Sortieren nach
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Name</a>
-                            <a class="dropdown-item" href="#">Telefonnummer</a>
-                            <a class="dropdown-item" href="#">Abteilung</a>
+                            <a class="dropdown-item" href="#" onclick="sort('name')">Name</a>
+                            <a class="dropdown-item" href="#" onclick="sort('telefonnummer')">Telefonnummer</a>
+                            <a class="dropdown-item" href="#" onclick="sort('abteilung')">Abteilung</a>
                         </div>
                     </div>
                 </div>

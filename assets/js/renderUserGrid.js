@@ -6,7 +6,7 @@
 	function renderUserGrid() {
 
 		const userData = window.filteredUserData;
-		const cardsInRow = 2;
+		const cardsInRow = 3;
 		const userDataEl = document.getElementById('userData');
 
 		let html = '';
@@ -31,12 +31,12 @@
 					<div class="card mb-3">
 						<div class="card-body"><h5 class="card-title">${user.vorname} ${user.name} </h5>
 							<h6 class="card-subtitle mb-2 text-muted">${user.gruppetext} (${user.gruppekuerzel})</h6>
-							<p class="card-text"><small class="text-muted">${user.funktion}</small></p>                     
-							<a href="tel:${user.telefon}" data-toggle="tooltip" title="${user.telefon}" class="card-link">Anrufen</a> 
-							<a href="mailto:${user.email}" data-toggle="tooltip" title="${user.email}" class="card-link">E-Mail schreiben</a> 
+							<p class="card-text"><small class="text-muted">${user.funktion}</small></p>
+							<a href="tel:${user.telefon}" data-toggle="tooltip" title="${user.telefon}" class="card-link">Anrufen</a>
+							<a href="mailto:${user.email}" data-toggle="tooltip" title="${user.email}" class="card-link">E-Mail schreiben</a>
 						</div>
 					</div>
-				</div>        
+				</div>
 			`;
 
 		});
