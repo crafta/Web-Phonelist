@@ -1,0 +1,58 @@
+{
+     "user_0":
+     {
+          "name": "Abdel",
+          "vorname": "Müller",
+          "telefon": "100-0000",
+          "email": "YYYYY.LKKKKKK@test.deYYYYY.LKKKKKK@test.deYYYYY.LKKKKKK@test.deYYYYY.LKKKKKK@test.deYYYYY.LKKKKKK@test.deYYYYY.LKKKKKK@test.deYYYYY.LKKKKKK@test.de",
+          "funktion": "SB",
+          "gruppetext": "---LLL___LLLLLLL",
+          "raum": "123",
+          "gruppekuerzel": "0.3"
+     },
+     "user_1":
+     {
+          "name": "Babdel",
+          "vorname": "Cüller",
+          "telefon": "111-100100",
+          "email": "test@test.de",
+          "funktion": "OP",
+          "gruppetext": "YEEET",
+          "raum": "12233",
+          "gruppekuerzel": "0.2"
+     },
+     "user_2":
+     {
+          "name": "Cabdel",
+          "vorname": "Düller",
+          "telefon": "123-100100",
+          "email": "test@test.de",
+          "funktion": "OP",
+          "gruppetext": "Cenis",
+          "raum": "12345",
+          "gruppekuerzel": "0.2"
+     },
+     "user_3":
+     {
+          "name": "Dabdel",
+          "vorname": "Füller",
+          "telefon": "739-100100",
+          "email": "test@test.de",
+          "funktion": "OP",
+          "gruppetext": "Benis",
+          "raum": "123333",
+          "gruppekuerzel": "0.2"
+     },
+     "user_4":
+     {
+          "name": "Fabdel",
+          "vorname": "Peter",
+          "telefon": "972-100100",
+          "email": "test@test.de",
+          "funktion": "OP",
+          "gruppetext": "Enis",
+          "raum": "1343423",
+          "gruppekuerzel": "0.2"
+     }
+
+}
